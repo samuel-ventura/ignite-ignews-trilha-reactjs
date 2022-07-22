@@ -7,6 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media(max-width: 650px) {
+    img {
+      display: none;
+    }
+  }
 }
 
 .hero {

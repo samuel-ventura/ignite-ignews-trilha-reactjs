@@ -1,4 +1,4 @@
-.signInButton{
+.signInButton {
   height: 3rem;
   border-radius: 3rem;
   background: var(--gray-850);
@@ -12,6 +12,37 @@
   color: var(--white);
   font-weight: bold;
 
+  @media(max-width: 650px) {
+    font-size: 0;
+    height: 3rem;
+    border-radius: 3rem;
+    padding: 0 0.05rem;
+
+    svg:first-child {
+      margin-left: 1rem;
+    }
+
+    svg.closeIcon {
+      margin-left: 0;
+      display: none;
+    }
+
+    &:hover {
+      svg:first-child {
+        display: none;
+      }
+
+      svg.active:first-child {
+        display: flex;
+      }
+
+      svg.closeIcon {
+        margin-right: 1rem;
+        display: flex;
+      }
+    }
+  }
+
   svg {
     width: 20px;
     height: 20px;
@@ -22,12 +53,17 @@
   }
 
   svg.closeIcon {
-    margin-left: 1rem;
+    display: none;
   }
 
   transition: filter 0.2s;
 
   &:hover {
-    filter: brightness(0.8)
+    filter: brightness(0.8); 
+    
+    svg.closeIcon {
+      margin-left: 1rem;
+      display: flex;
+    }
   }
 }

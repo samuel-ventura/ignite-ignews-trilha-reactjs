@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 export function SignInButton() {
   const { data: session } = useSession()
 
-  return session   ? (
+  return session ? (
     <button
       type="button"
       className={styles.signInButton}
@@ -24,7 +24,7 @@ export function SignInButton() {
       className={styles.signInButton}
       onClick={() => signIn('github')}
     >
-      <FaGithub color="#eba417" />
+      <FaGithub color="#eba417" className={styles.active}/>
       Sign in with Github
     </button>
   )
